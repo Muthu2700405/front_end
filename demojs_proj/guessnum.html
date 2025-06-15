@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+</head>
+<body>
+    <h1>Guess The Number</h1><br>
+    <input type="number" style="background-color: beige;" id="dis"> <button onclick=check()>check</button>
+    <p id="luck">Check your Luck</p><br>
+    <p>Your score : </p><p id ="score">0</p>
+</body>
+</html>
+
+<script>
+    function check(){
+    var num = document.getElementById("dis").value
+    var max=1,min=10
+    var ran = Math.floor(Math.random()*10)+1
+    console.log(ran)
+    var x=document.getElementById("luck")
+    var sc=document.getElementById("score")
+    var box=document.getElementById("dis")
+    if (Number(num)==ran){
+        x.textContent="Congrats Your Guessed right"
+        sc.textContent =Number(sc.textContent)+1
+        box.style.backgroundColor='blue'
+        x.style.color='blue'
+        alert("you WON......")
+    }
+    else{
+        x.textContent="Oops your guess is wrong"
+        val =Number(sc.textContent)-1
+        box.style.backgroundColor='red'
+        x.style.color='red'
+        if (val<0){
+            sc.textContent=0;
+        }
+        else{
+            sc.textContent=val;
+        }
+        alert("you LOSE......")
+    }
+    }
+</script>
