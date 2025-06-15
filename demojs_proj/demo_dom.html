@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_demo</title>
+</head>
+<body>
+    <h1 id = "title">Hello world</h1>
+    <h2 id = "ak">Hi AK</h2>
+    <button onclick=change()>change</button>
+</body>
+</html>
+
+<script>
+    var x=document.getElementById("ak")
+    console.log(x.textContent)
+    function change(){
+    x.textContent="Bye AK"
+    }
+</script>
