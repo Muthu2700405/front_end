@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    color: black;
+    justify-content: center;
+    width: 2400px;
+    height:1080px;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.display{
+    text-align: right;
+}
+table{
+    background-color: black;
+    height: fit-content;
+    width: fit-content;
+    flex-basis: 25%;
+}
+td{
+    background-color: black;
+    color: black;
+    background-color: grey;
+   
+    margin: 2px;
+    justify-content: space-evenly;
+    justify-content: center;
+
+}
