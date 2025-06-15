@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+<div>
+    <center>
+        Num1 : <input type="number" id="Num1"><br>
+        Num2 : <input type = "number" id = "Num2">
+    </center>
+</div>
+<div>
+<center>
+    <button onclick=cal(1) onkeypress=cal(1)>add</button>
+    <button  onclick=cal(2) onkeypress=cal(2)>sub</button>
+    <button  onclick=cal(3) onkeypress=cal(3)>multiply</button>
+    <button  onclick=cal(4) onkeypress=cal(4)>division</button><br><hr>
+    <table border="2px"> <tr><td><p id="add">Result:</p></td></tr></table>
+    <hr>
+</center>
+</div>
+
+</body>
+</html>
+<script>
+    function cal(op){
+        var x = document.getElementById("Num1")
+        var y = document.getElementById("Num2")
+        var result = document.getElementById("add")
+        var num1 = Number(x.value)
+        var num2 = Number(y.value)
+        if (op==1){
+        console.log(num1+num2)
+        result.textContent=num1+num2
+        }
+        else if (op==2){
+        console.log(num1+num2)
+        result.textContent=num1-num2
+        }
+        else if (op==3){
+        console.log(num1+num2)
+        result.textContent=num1*num2
+        }
+        else if (op==4){
+        console.log(num1+num2)
+        result.textContent=num1/num2
+        }
+    }
+</script>
